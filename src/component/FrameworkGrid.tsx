@@ -2,10 +2,10 @@ import { Paper, Stack } from '@mui/material';
 import Grid from '@mui/material/Unstable_Grid2';
 
 const frameworkList = ['Spring', 'React', 'Node.js', 'Next.js', 'AngularJS', 'MySQL', 
-    'Unix', 'Windows', 'AWS EC2', 'S3', 'CodePipeline', 'C/C++', 'Java SE', 
-    'x86 Assembly', 'Python', 'HTML5', 'CSS', 'JavaScript', 'TypeScript', 
-    'Cucumber', 'Agile', 'DevOps', 'Docker', 'Scrum', 'Git', 
-    'Jira', 'CI/CD', 'Networking', 'TCP/IP', 'RESTful APIs',
+    'AWS', 'Azure', 'EC2', 'S3', 'CodePipeline', 'Supabass', 'Vercel', 'Prisma', 'C/C++', 'Java SE', 
+    'Python', 'HTML5', 'CSS', 'JavaScript', 'TypeScript', 
+    'Cucumber', 'Docker', 'Scrum', 'Git', 'Kubernetes',
+    'CI/CD', 'RESTful APIs', 'PostgreSQL', 'Jenkins',
     'C#', '.NET'
 ]
 

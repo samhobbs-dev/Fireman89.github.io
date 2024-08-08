@@ -33,8 +33,8 @@ const IntroBlock: React.FC = () => {
         </Grid>
         <Grid sx={{ maxWidth: 700, margin: "auto" }}>            
             <Typography sx={{ fontFamily: "Courier New"}}>
-                Software Developer with 3+ years managing full stack projects.
-                Currently pursuing opportunities to apply and expand skills in software engineering.
+                Software Developer with 3+ years of experience managing full stack projects.
+                Currently pursuing new opportunities to apply and expand skills in software engineering.
             </Typography>
         </Grid>
     </Grid>

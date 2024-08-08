@@ -13,17 +13,27 @@ import spring from "../image/spring.svg"
 
 const cfbhDescription = 
 `
-Want to browse college football seasons and quickly pull up each school's games and logos?
-I first built a Python scraper to save every NCAA season, game, and team  
-to a MySQL database and 
-scraped high-resoultion team logos to upload  
-to an S3 bucket. Then, I built an AWS-hosted full-stack application with a React-based UI and Spring-based backend.
-This new site allows you to select any season, showing every team and conference from that 
-year with their logo at the time. You can then hover over the team's record and pull up all their games, 
-opponents, and scores that season. All logos are owned by the schools and are used under Fair Use.
+Want to browse older college football seasons and logos at the same time? Now you can! 
+This full stack application is run by Next.js & hosted by Vercel & Supabass, using data 
+scraped from public sources via a Python script. 
+You to select any season from 1897 to 2022, showing every team and conference with their logo at the time. You can then hover over the team's record and pull up all their games, 
+opponents, and scores that season. This app was initially based in React & Spring and hosted on AWS,  
+but it has since been migrated. All logos are owned by the schools and are used under Fair Use.
 `
-const cfbhLink = 'http://cfbhistory.net';
-const cfbhProjectLink = 'https://github.com/Fireman89/cfbh-public';
+const cfbhLink = 'https://cfbhistory.net';
+const cfbhProjectLink = 'https://github.com/Fireman89/cfb-history-next';
+
+const merckDescription =
+`
+Working with Merck, a pharmaceutical company, I efficiently handled more than 40 technical 
+support tickets and oversaw the management of certificates, users, and DNS records. I 
+automated the transfer and archiving of over 800 Bitbucket repositories to GitHub, 
+utilizing Python, batch scripts, and Bitbucket pipelines. Furthermore, I transferred DNS 
+records to new IIS cloud servers, redirected them to a Cloudfront load balancer, and 
+conducted spoof testing.
+`
+
+const merckYears = 'Aug \'23 - Pres'
 
 const tmoDescription = 
 `
@@ -38,12 +48,13 @@ const tmoYears = 'Oct - Dec \'22'
 
 const hclDescription =
 `
-Contract worker for client companies' technological and needs. 
-Developed full stack capstone application on 10-person capstone team. 
-Currently assisting Merck as a client. Previously worked with T-Mobile.
+As a developer for HCLTech, a global technology consulting company, I've  had the privilege to
+help clients with their many diverse technological needs. As of now, I have worked with T-Mobile &
+Merck. Outside of this, I led a 10-strong team in the development of an Angular- & Java-based full stack application
+for a capstone project.
 `
-const hclYears = 'Jul \'22 - Pres.';
-const cfbhImage = 'https://portfolio-app.s3.us-east-2.amazonaws.com/CFBH+Demo.gif';
+const hclYears = 'Jul \'22 - Pres';
+const cfbhImage = 'https://portfolio-app.s3.us-east-2.amazonaws.com/CFB+History.png';
 
 const EntryList: React.FC = () => {
     return(
@@ -62,7 +73,7 @@ const EntryList: React.FC = () => {
                     {cfbhDescription}
                 </Typography>
                 <br/>
-                <Grid container paddingBottom={1} spacing={1} justifyContent="center">
+                {/* <Grid container paddingBottom={1} spacing={1} justifyContent="center">
                     {[aws, react, spring, mysql].map(fwl => (
                         <Grid>
                         <Paper component={Box} display="flex" justifyContent="center" alignItems="center"
@@ -71,20 +82,16 @@ const EntryList: React.FC = () => {
                         </Paper>
                         </Grid>
                     ))}
-                </Grid>
-                <img src={cfbhImage} alt="blockImage"/>
+                </Grid> */}
+                <Box justifyContent="center" alignItems="center">
+                    <a href={cfbhLink}>
+                        <img src={cfbhImage} alt="blockImage" height="555"/>
+                    </a>
+                </Box>
             </Stack>
                         
             <Typography sx={{ color: "lightblue", fontSize: "24px", fontFamily: "Courier New" }}>
                 EXPERIENCE
-            </Typography>
-            
-            <EntryHeader
-                title="T-Mobile"
-                years={tmoYears}
-            />            
-            <Typography sx={{ fontSize: "16px" }}>
-                {tmoDescription}
             </Typography>
             
             <EntryHeader
@@ -94,7 +101,23 @@ const EntryList: React.FC = () => {
             <Typography sx={{ fontSize: "16px" }}>
                 {hclDescription}
             </Typography>
-                      
+
+            <EntryHeader
+                title="Merck"
+                years={merckYears}
+            />            
+            <Typography sx={{ fontSize: "16px" }}>
+                {merckDescription}
+            </Typography>
+
+            <EntryHeader
+                title="T-Mobile"
+                years={tmoYears}
+            />            
+            <Typography sx={{ fontSize: "16px" }}>
+                {tmoDescription}
+            </Typography>
+            
             <br/>
             <Typography sx={{ color: "lightblue", fontSize: "24px", fontFamily: "Courier New" }}>
                 EDUCATION
@@ -104,7 +127,7 @@ const EntryList: React.FC = () => {
                 years="Aug '18 - May '22"
             />
             <Typography sx={{ fontSize: "16px" }}>
-                {"Bachelor of Science - Computer Science (GPA: 3.31)"}
+                {"Bachelor of Science - Computer Science"}
             </Typography>
 
             <Typography sx={{ color: "lightblue", fontSize: "24px", fontFamily: "Courier New" }}>
