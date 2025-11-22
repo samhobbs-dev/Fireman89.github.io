@@ -6,10 +6,11 @@ interface Props {
     icon?: string;
     link?: string;
     projectLink?: string;
+    projectLinks?: string[];
     years?: string;
 }
 
-const EntryHeader: React.FC<Props> = ({ title, icon, link, projectLink, years }) => {
+const EntryHeader: React.FC<Props> = ({ title, icon, link, projectLink, projectLinks, years }) => {
     return (
         <Stack direction="row" spacing={1} sx={{ height: "45px", alignItems: "center" }}>
             {icon ?
@@ -31,7 +32,15 @@ const EntryHeader: React.FC<Props> = ({ title, icon, link, projectLink, years })
                     <img src={githubIcon} alt="github" style={{ maxHeight: "30px" }}/>
                 </a>          
                 </Box>) : ''
-            }                         
+            }                       
+            {projectLinks ? 
+                (projectLinks.map((pl) =>
+                (<Box sx={{ display: "flex" }}>
+                    <a href={pl} target="_blank" rel="noopener noreferrer">
+                    <img src={githubIcon} alt="github" style={{ maxHeight: "30px" }}/>
+                </a>          
+                </Box>))) : ''
+            }                    
             {years ?
                 (
                 <Box sx={{ height: "26px", fontSize: "18px", display: "flex", alignItems: "center"}}>    

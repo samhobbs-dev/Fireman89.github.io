@@ -4,7 +4,7 @@ import cfbhIcon from '../image/cfbhicon.png'
 import FrameworkGrid from "./FrameworkGrid";
 import Footer from "./Footer";
 
-import { experienceData, projectData } from "../data/portfolioData";
+import { experienceData, featuredProjectData } from "../data/portfolioData";
 
 
 
@@ -37,33 +37,41 @@ const EntryList: React.FC = () => {
         <Box>
           <Typography sx={sectionTitleStyle}>FEATURED</Typography>
           <Stack direction="column" spacing={2}>
-            {projectData.map((project) => (
-                <Box key={project.title}>
-                    <EntryHeader
-                    title={project.title}
-                    icon={cfbhIcon}
-                    link={project.link}
-                    projectLink={project.projectLink}
-                    />
-                    <Typography sx={bodyTextStyle}>{project.description}</Typography>
-        
-                    <Box display="flex" justifyContent="center" alignItems="center" paddingTop={2}>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <Box
-                        component="img"
-                        src={project.image}
-                        alt={`${project.title} preview`}
-                        sx={{
-                            width: "100%",
-                            maxWidth: "800px",
-                            borderRadius: 1,
-                            boxShadow: 2,
-                        }}
-                        />
-                    </a>
-                    </Box>
-                </Box>
-            ))}
+          {featuredProjectData && (
+              <Box key={featuredProjectData.title}>
+                  <EntryHeader
+                      title={featuredProjectData.title}
+                      icon={cfbhIcon}
+                      link={featuredProjectData.link}
+                      projectLink={featuredProjectData.projectLink}
+                  />
+                  <Typography sx={bodyTextStyle}>{featuredProjectData.description}</Typography>
+
+                  <Box display="flex" justifyContent="center" alignItems="center" paddingTop={2}>
+                      <a href={featuredProjectData.link} target="_blank" rel="noopener noreferrer">
+                          <Box
+                              component="img"
+                              src={featuredProjectData.image}
+                              alt={`${featuredProjectData.title} preview`}
+                              sx={{
+                                  width: "100%",
+                                  maxWidth: "800px",
+                                  borderRadius: 1,
+                                  boxShadow: 2,
+                              }}
+                          />
+                      </a>
+                  </Box>
+              </Box>
+          )}
+            <Box width='95%' textAlign="right">
+              <Typography
+                component="a"
+                href="projects"
+                color={"#39ff14"}>
+                  See more projects &gt;&gt;
+              </Typography>
+            </Box>
           </Stack>
         </Box>
   
