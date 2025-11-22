@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
 import selfpic from '../image/selfpic-cropped.jpg';
 import useWindowSize from "../hook/useWindowSize";

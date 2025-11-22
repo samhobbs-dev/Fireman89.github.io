@@ -1,15 +1,9 @@
-import { Box, Paper, Stack, Typography } from "@mui/material";
-import Grid from '@mui/material/Unstable_Grid2';
+import { Box, Stack, Typography } from "@mui/material";
 import EntryHeader from "./EntryHeader";
 import cfbhIcon from '../image/cfbhicon.png'
 import FrameworkGrid from "./FrameworkGrid";
 import Footer from "./Footer";
 
-import aws from "../image/aws.svg"
-import mysql from "../image/mysql.svg"
-import python from "../image/python.svg"
-import react from "../image/react.svg"
-import spring from "../image/spring.svg"
 import { experienceData, projectData } from "../data/portfolioData";
 
 

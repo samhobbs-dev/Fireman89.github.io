@@ -1,8 +1,5 @@
-import React from 'react';
 import './App.css';
 import HeaderBar from './component/HeaderBar';
-import IntroBlock from './component/IntroBlock';
-import EntryList from './component/EntryList';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from './page/MainPage';
 import AboutPage from './page/AboutPage';

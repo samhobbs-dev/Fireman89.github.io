@@ -1,4 +1,4 @@
-import { AppBar, Box, IconButton, Stack, Toolbar, Typography } from "@mui/material";
+import { AppBar, IconButton, Stack, Toolbar, Typography } from "@mui/material";
 import linkedin from '../image/linkedin.png'
 import githubIcon from '../image/github-mark-white.svg'
 

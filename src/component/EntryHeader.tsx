@@ -1,6 +1,5 @@
 import { Box, Stack } from "@mui/material";
 import githubIcon from '../image/github-mark-white.svg'
-import useWindowSize from "../hook/useWindowSize";
 
 interface Props {
     title: string;
@@ -8,10 +7,6 @@ interface Props {
     link?: string;
     projectLink?: string;
     years?: string;
-}
-
-const MyStyle = {
-
 }
 
 const EntryHeader: React.FC<Props> = ({ title, icon, link, projectLink, years }) => {
